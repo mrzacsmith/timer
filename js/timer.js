@@ -1,4 +1,5 @@
 let countdown
+const displayCountdown = document.querySelector('.display_countdown')
 
 const timer = (seconds) => {
   const now = Date.now()
@@ -9,6 +10,12 @@ const timer = (seconds) => {
     if (secondsLeft <= 0) {
       clearInterval(countdown)
     }
-    console.log(secondsLeft)
+    displayTimeLeft(secondsLeft)
   }, 1000)
+}
+
+const displayTimeLeft = (seconds) => {
+  const display = seconds
+
+  displayCountdown.textContent = display
 }
