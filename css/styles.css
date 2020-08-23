@@ -10,7 +10,7 @@
 .container {
   margin: 0 auto;
   width: 100%;
-  background: goldenrod;
+  /* background: goldenrod; */
   text-align: center;
 }
 
@@ -25,6 +25,9 @@ input[type='text'] {
 .timer {
   display: flex;
   min-height: 100vh;
+  background: url('https://source.unsplash.com/random');
+  background-repeat: no-repeat;
+  background-position: center;
   flex-direction: column;
 }
 
@@ -70,6 +73,7 @@ input[type='text'] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .display_countdown {
