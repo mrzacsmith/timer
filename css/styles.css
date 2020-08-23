@@ -1,21 +1,86 @@
-html {
-  box-sizing: border-box;
-  max-width: 1200px;
-  width: 100%;
+* {
   margin: 0;
   padding: 0;
+  font-family: 'Barlow', sans-serif;
+  max-width: 1200px;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+.container {
+  margin: 0 auto;
+  width: 100%;
+  background: goldenrod;
+  text-align: center;
 }
 
-body {
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'Barlow', sans-serif;
-  background: goldenrod;
+button {
+  font-size: 2.5rem;
+}
+
+input[type='text'] {
+  font-size: 2.5rem;
+}
+
+.timer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.timer_controls {
+  display: flex;
+}
+
+.timer_controls > * {
+  flex: 1;
+}
+
+.timer_controls form {
+  flex: 1;
+  display: flex;
+}
+
+.timer_controls input {
+  flex: 1;
+  border: 0;
+  padding: 2rem;
+  background: #0f0f0f;
+}
+
+.timer_btn {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.timer_btn:hover,
+.timer_btn:focus {
+  background: rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+
+.display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.display_countdown {
+  font-weight: 800;
+  font-size: 25rem;
+  margin: 0;
+  color: white;
+  text-shadow: 4px 4px 0 rbga(0, 0, 0, 0.05);
+}
+
+.display_return-time {
+  font-weight: 500;
+  font-size: 5rem;
 }
