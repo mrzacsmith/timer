@@ -15,7 +15,12 @@ const timer = (seconds) => {
 }
 
 const displayTimeLeft = (seconds) => {
-  const display = seconds
+  const minutes = Math.floor(seconds / 60)
+  const secsRemaining = seconds % 60
+  const display =
+    secsRemaining > 9
+      ? `${minutes}:${secsRemaining}`
+      : `${minutes}:0${secsRemaining}`
 
   displayCountdown.textContent = display
 }
