@@ -28,6 +28,7 @@ const displayTimeLeft = (seconds) => {
       ? `${minutes}:${secsRemaining}`
       : `${minutes}:0${secsRemaining}`
 
+  document.title = display
   displayCountdown.textContent = display
 }
 
@@ -44,7 +45,6 @@ const displayEndTime = (timestamp) => {
 }
 
 function startTimer() {
-  // console.log(this)
   const seconds = parseInt(this.dataset.time)
   timer(seconds)
 }
@@ -58,7 +58,6 @@ const playAudio = () => {
   ]
   const randNum = Math.floor(Math.random() * sounds.length)
   const audio = new Audio(sounds[randNum])
-  console.log(randNum)
   audio.play()
 }
 
