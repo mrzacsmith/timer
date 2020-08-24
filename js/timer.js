@@ -14,6 +14,7 @@ const timer = (seconds) => {
     const secondsLeft = Math.round((then - Date.now()) / 1000)
     if (secondsLeft <= 0) {
       clearInterval(countdown)
+      playAudio()
     }
     displayTimeLeft(secondsLeft)
   }, 1000)
@@ -46,6 +47,11 @@ function startTimer() {
   // console.log(this)
   const seconds = parseInt(this.dataset.time)
   timer(seconds)
+}
+
+const playAudio = () => {
+  const audio = new Audio('../media/rooster.mp3')
+  audio.play()
 }
 
 buttons.forEach((button) => button.addEventListener('click', startTimer))
