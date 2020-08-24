@@ -50,7 +50,15 @@ function startTimer() {
 }
 
 const playAudio = () => {
-  const audio = new Audio('../media/rooster.mp3')
+  const sounds = [
+    '../media/rooster.mp3',
+    '../media/pager.mp3',
+    '../media/skidding.mp3',
+    '../media/frongs.mp3',
+  ]
+  const randNum = Math.floor(Math.random() * sounds.length)
+  const audio = new Audio(sounds[randNum])
+  console.log(randNum)
   audio.play()
 }
 
