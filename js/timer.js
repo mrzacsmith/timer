@@ -1,6 +1,7 @@
 let countdown
 const displayCountdown = document.querySelector('.display_countdown')
 const endTime = document.querySelector('.display_return-time')
+const buttons = document.querySelectorAll('[data-time')
 
 const timer = (seconds) => {
   clearInterval(countdown)
@@ -40,3 +41,17 @@ const displayEndTime = (timestamp) => {
 
   endTime.textContent = endTimeDisplay
 }
+
+function startTimer() {
+  // console.log(this)
+  const seconds = parseInt(this.dataset.time)
+  timer(seconds)
+}
+
+buttons.forEach((button) => button.addEventListener('click', startTimer))
+document.time_input.addEventListener('submit', function (e) {
+  e.preventDefault()
+  const mins = this.minutes.value
+  timer(mins * 60)
+  this.reset()
+})
